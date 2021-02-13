@@ -1,0 +1,43 @@
+body{ 
+	background: url(background1.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+#home-logo-wrapper{
+	padding: 60px 0px 60px 0px;
+}
+
+#logo-wrapper img{
+	max-height: 60px
+}
+
+.spacing-wrapper{
+	padding: 30px 500px 30px 500px;
+}
+#go-button{
+	padding: 40px 500px 30px 500px;
+}
+.upload-wrapper{
+	padding: 100px 500px 50px 500px;
+}
+div.options{
+	padding: 15px;
+	border: 2px solid rgb(56, 93, 138);
+	background-color: rgba(255,255,255, 0.5);
+	font-size: 18px;
+}
+img.displayed {
+    display: inline-block;
+    margin-left: initial;
+    margin-right: auto }
+
+.content {
+    margin-left: auto;
+    margin-right: auto;
+    table-layout: fixed;
+    border-collapse: collapse;
+    z-index: -1; position:relative
+}
