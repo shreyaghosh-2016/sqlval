@@ -1,0 +1,132 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+	
+		<title>Sql-Val Unleash power of validity</title>
+		<meta content="text/html; charset=utf-8" http-equiv="content-type">
+		
+		<link rel="icon" href="favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/sidetogglemenu.css" />
+		<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="js/freewall.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				app.setup({
+					share: 1,
+					color: 1,
+					layout: 1,
+					events: 1,
+					methods: 1,
+					options: 1,
+					preload: 1,
+					drillhole: 1
+				});
+			});
+		</script>
+		<style type="text/css">
+			.free-wall {
+				margin: 15px;
+			}
+		</style>
+		
+<script src="js/sidetogglemenu.js">
+</script>
+<script>
+
+jQuery(function(){ // on DOM load
+	menu1 = new sidetogglemenu({  // initialize first menu example
+		id: 'togglemenu1',
+		marginoffset: 10
+	})
+
+	menu2 = new sidetogglemenu({  // initialize second menu example
+		id: 'togglemenu2',
+		position: 'left',
+		source: 'togglemenu.txt',
+		revealamt: -5
+	})
+})
+
+</script>
+
+<script>
+
+jQuery(function(){ // on DOM load
+ menu1 = new sidetogglemenu({ // initialize first menu example
+  id: 'togglemenu1',
+  pushcontent: true // <- No comma after last option!
+ })
+})
+
+</script>
+<script>
+
+jQuery(function(){ // on DOM load
+ menu2 = new sidetogglemenu({ // initialize first menu example
+  id: 'togglemenu2',
+  position: 'left',
+  pushcontent: true // <- No comma after last option!
+ })
+})
+</script>
+		
+<!-- header in style .css and delay in index.js and color of bricks before that in index.js-->		
+	</head>
+	<body>
+ <div id="divMain" style="width:962px;height:727px;overflow:hidden; background-color:#f1f1f1">
+
+	<div class='header'>
+			<div class="clearfix">
+				<div class="float-left">
+				
+				               <div id="logo-wrapper" class="col-sm-offset-4 col-sm-4">
+				                   <img class="img-responsive" src="img/logo.png" alt="logo">
+			                       </div>           
+				        	<h1>Power of Validation</h1>
+						
+				</div>
+				
+				<ul class="float-right reponsive-block">
+				
+				      <!--  <h5>HELP</h5>-->
+					<li><a class="desktop active" data-width="auto"></a></li> 
+					<li><a class="tablet-landscape" data-width="1024"></a></li>
+					<li><a class="tablet-portrait" data-width="768"></a></li>
+					<li><a class="iphone-landscape" data-width="960"></a></li>
+					<li><a class="iphone-portrait" data-width="640"></a></li>
+				        <li>
+                                 <img src="img/menu1.png" style="width:90px;height:90px"onClick="menu2.toggle()" class="sideviewtoggle" ></li>	
+									
+					
+				</ul>	
+				
+			</div>
+		</div>
+		
+		<div id="freewall-logo" class="free-wall-logo"></div>
+		
+	<div id="togglemenu2" class="sidetogglemenu">
+<ul>
+</br></br></br>
+<li><a href="upload_new.cshtml">Upload and Validate</a></li></br>
+<li><a href="*">Validate Saved Script</a></li></br>
+<li><a href="newscript.html">Write New Script</a></li></br>
+<li><a href="documentation.html">Help</a></li></br>
+<li><a href="contact.html">Contact US</a></li>
+</ul>
+
+<p style="padding:10px; color: lightyellow">
+You are all set now. Just upload and start enjoying our service. You are one step ahead of those who does not use it. 
+
+</p>
+
+</div>
+</div>
+	</body>
+</html>

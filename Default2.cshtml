@@ -1,0 +1,86 @@
+@{
+	Array file_input = null;
+	var SQLText = "";
+	var filename = @"./temp.txt";
+	 
+	if(IsPost)
+	{
+		var uploadedFile = Request.Files[0];
+		var fileSavePath = Server.MapPath(filename);
+		uploadedFile.SaveAs(fileSavePath);
+
+		if(File.Exists(fileSavePath))
+		{
+			file_input = File.ReadAllLines(fileSavePath);
+			foreach(string dataLine in file_input)
+			{
+				SQLText = SQLText + "\n" + dataLine;
+			}
+			<!---Class1.-->
+		}
+	}
+}
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>SQLVal</title>
+
+    <link href="./css/bootstrap.min.css" rel="stylesheet" />
+    <link href="./css/custom.css" rel="stylesheet" />
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+
+</head>
+<body>
+	<style>
+	 div.row{padding: 20px;}
+	</style>
+    <!-- IMPORTANT - Please read the following comments carefully before you start designing your page.
+            This is the parent DIV which has the required Height and Width attributes set.
+            DO NOT REMOVE the DIV element.
+            DO NOT MODIFY the Height and Width attributes.
+            You can either change or remove the 'background-color' attribute, as well as rename the ID of the DIV  -->
+    <div id="divMain" style="width:962px;height:727px;overflow:hidden; background-color:#f1f1f1">
+
+
+        <div class="row">
+            <div class="col-xs-12">
+                <form method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+						<label for="inputEmail3" class="col-sm-1 control-label">
+							Upload
+						</label>
+						<div class="col-sm-4">
+							<input type="file" name="SQLFile">
+						</div>
+						<div class="col-sm-2">
+							<button type="submit" class="btn btn-primary btn-sm btn-block">SUBMIT</button>
+						</div>
+                        
+                    </div>
+                </form>
+            </div>
+
+		@if(IsPost && !string.IsNullOrWhiteSpace(SQLText))
+		{
+  		
+			<div class="col-xs-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">Panel heading without title</div>
+					<div class="panel-body">
+						<textarea class="form-control" rows="3">@SQLText</textarea>
+					</div>
+				</div>
+				<pre>@SQLText</pre>
+			</div>
+		}
+		
+        </div>
+
+
+
+    </div>
+</body>
+</html>

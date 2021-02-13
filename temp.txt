@@ -1,0 +1,13 @@
+CREATE TABLE Enm(sal int
+,name char(10));
+CREATE TABLE Dept(DID int,
+location varchar(50));
+CREATE TABLE manager(m_id int,
+name char(MAX));
+INSERT INTO Enm(sal,name) VALUES ('kolkata','Jinju_Mol_George');
+SELECT * FROM Enm;
+SELECT sal FROM Emp;
+INSERT INTO Dept(DID,location) VALUES ('10','kolkata','wb');
+SELECT name FROM Dept;
+SELECT BALANCE FROM Enm;
+SELECT location FROM Dept

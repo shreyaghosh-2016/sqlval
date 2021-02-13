@@ -1,0 +1,17 @@
+Entering in the Validation Process 
+ 
+WARNING : char(MAX) is not advisable to use  in your script 
+ERROR: Error while inserting Jinju_Mol_George datatype size does not match
+ERROR: Error while inserting Jinju_Mol_George datatype does not match.
+ERROR: Error while inserting kolkata datatype does not match.
+WARNING : SELECT * FROM Enm is not advisable to use in your script 
+ERROR: NO table Emp exists 
+ERROR : no such sal column exists in Emp
+ERROR : no such sal column exists in Emp
+ERROR: Error while inserting the values in Dept,number of columns and number of values are not matching.
+ERROR : no such name column exists in Dept
+ERROR : no such BALANCE column exists in Enm
+ERROR: Syntax Error is : 
+ SELECT location FROM Dept 
+Finished
+ Thank You for using SQLVAL

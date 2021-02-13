@@ -1,0 +1,194 @@
+@{
+	Array file_input = null;
+	var SQLText = "";
+	var filename = @"~/temp.txt";
+
+	var fileSavePath = Server.MapPath(filename);
+
+	if(IsPost)
+	{
+		if(File.Exists(fileSavePath) && Request.Files[0]!=null)
+		{
+			File.Delete(fileSavePath);
+		}
+
+		var uploadedFile = Request.Files[0];
+		
+		uploadedFile.SaveAs(fileSavePath);
+
+	}
+}
+
+
+
+
+<!DOCTYPE html>
+
+
+	<html xmlns="http://www.w3.org/1999/xhtml">
+    <head runat="server">
+
+    <link href="./css/bootstrap.min.css" rel="stylesheet" />
+    <link href="./css/custom.css" rel="stylesheet" />
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+
+		<meta charset="utf-8"/>
+		<title>File Upload Form</title>
+
+		<link href="css/style_upload.css" rel="stylesheet" />
+		
+		<link rel="stylesheet" type="text/css" href="css/sidetogglemenu.css" />
+		<link rel="stylesheet" type="text/css" href="css/style_main.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/custom.css" />
+		
+		<script src="js/jquery.min.js"></script>
+		<script src="js/sidetogglemenu.js">
+
+		</script>
+		<script>
+
+		jQuery(function(){ // on DOM load
+		menu1 = new sidetogglemenu({  // initialize first menu example
+			id: 'togglemenu1',
+			marginoffset: 10
+			})
+
+		menu2 = new sidetogglemenu({  // initialize second menu example
+			id: 'togglemenu2',
+			position: 'right',
+			source: 'togglemenu.txt',
+			revealamt: -5
+			})
+			})
+
+		</script>
+
+		<script>
+		$(document).ready(
+    function(){
+        $('input:file').change(
+            function(){
+                if ($(this).val()) {
+                    $('a.disabled').removeClass('disabled');
+                    
+                } 
+            }
+            );
+    });
+		</script>
+		<script>
+
+		jQuery(function(){ // on DOM load
+		menu1 = new sidetogglemenu({ // initialize first menu example
+			id: 'togglemenu1',
+			pushcontent: true // <- No comma after last option!
+			})
+		})
+
+		</script>
+		<script>
+
+		jQuery(function(){ // on DOM load
+		menu2 = new sidetogglemenu({ // initialize first menu example
+			id: 'togglemenu2',
+			position: 'left',
+			pushcontent: true // <- No comma after last option!
+			})
+		})
+		</script>
+	        <!-- home-->	
+		<script>
+			$(document).ready(function() {
+				$('img.thumbnail').click(function() {
+					window.location.href ='Default.cshtml';
+			});
+			});
+			</script>
+			
+		<!-- Go Button-->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/custom.css" rel="stylesheet">
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<div id="divMain" style="width:962px;height:727px;overflow:hidden">
+		<div class="container-fluid">
+			<div id="logo-wrapper" class="col-sm-12">
+				<img class="img-responsive" src="img/logo.png" alt="logo">
+			</div>
+	
+			<!--Side Bar -->
+			<ul class="float-right reponsive-block">
+			
+			
+			           <img class="thumbnail" src="img/home.png" style="width:60px;height:45px" /> 
+			           <img src="img/menu.png" style="width:60px;height:45px"onClick="menu2.toggle()" class="sideviewtoggle" />	
+			</ul>
+			
+			
+			
+			<div id="togglemenu2" class="sidetogglemenu">		
+			<ul>
+			</br></br></br>
+<li><a href="upload_new.cshtml">Upload and Validate</a></li></br>
+<li><a href="documentation.html">Help</a></li></br>
+<li><a href="contact.html">Contact US</a></li>
+</ul>
+
+<p style="padding:10px; color: lightyellow">
+You are all set now. Just upload and start enjoying our service. You are one step ahead of those who does not use it. 
+
+</p>
+
+</div>
+
+			
+		
+	  <form id="upload" method="post" enctype="multipart/form-data">>
+			<div id="drop">
+				Drop Here
+				         <div class="col-sm-10">
+							<input type="file" name="SQLFile">
+						</div>
+				<a>Browse</a>
+				</div>
+		         <ul>
+				<!-- The file uploads will be shown here -->
+			</ul>
+				</form>
+
+			            <div class="row">
+			
+		</div>
+				</div>
+		<div class="spacing-wrapper" >
+			
+		<a class="btn btn-primary btn-lg disabled"   href="go_newscript.cshtml"  >GO >></a>
+			
+		</div>
+
+
+			<ul>
+				<!-- The file uploads will be shown here -->
+			</ul>
+
+		
+		</div>
+		<footer>
+           		
+            <div id="tzine-actions">
+         	
+            </div>
+        </footer>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="js/jquery.knob.js"></script>
+		<script src="js/jquery.ui.widget.js"></script>
+		<script src="js/jquery.iframe-transport.js"></script>
+		<script src="js/jquery.fileupload.js"></script>
+		<script src="js/script.js"></script>
+	</div> 
+	</body>
+</html>
