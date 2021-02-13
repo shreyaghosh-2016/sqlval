@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Antlr4.4.4.1-alpha001\build\Antlr4.props" Condition="Exists('..\packages\Antlr4.4.4.1-alpha001\build\Antlr4.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{07FA7ED1-7150-4F3B-8848-20B1B55E5B54}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Testing</RootNamespace>
+    <AssemblyName>Testing</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>893e53dd</NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr4.Runtime">
+      <HintPath>..\packages\Antlr4.Runtime.4.4.1-alpha001\lib\net45\Antlr4.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CodeError.cs" />
+    <Compile Include="ConsoleErrorListener.cs" />
+    <Compile Include="DSLErrorListener.cs" />
+    <Compile Include="Foo.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Testing.g4.lexer.cs">
+      <DependentUpon>Testing.g4</DependentUpon>
+    </Compile>
+    <Compile Include="Testing.g4.parser.cs">
+      <DependentUpon>Testing.g4</DependentUpon>
+    </Compile>
+    <Compile Include="TestVisitor.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="EmptySite\App_Data\packages\Microsoft.AspNet.Razor.2.0.30506.0\Microsoft.AspNet.Razor.2.0.30506.0.nupkg" />
+    <None Include="EmptySite\App_Data\packages\Microsoft.AspNet.WebPages.2.0.30506.0\Microsoft.AspNet.WebPages.2.0.30506.0.nupkg" />
+    <None Include="EmptySite\App_Data\packages\Microsoft.AspNet.WebPages.Data.2.0.20710.0\Microsoft.AspNet.WebPages.Data.2.0.20710.0.nupkg" />
+    <None Include="EmptySite\App_Data\packages\Microsoft.AspNet.WebPages.WebData.2.0.30506.0\Microsoft.AspNet.WebPages.WebData.2.0.30506.0.nupkg" />
+    <None Include="EmptySite\App_Data\packages\Microsoft.Web.Infrastructure.1.0.0.0\Microsoft.Web.Infrastructure.1.0.0.0.nupkg" />
+    <None Include="EmptySite\Default.cshtml" />
+    <None Include="EmptySite\go_newscript.cshtml" />
+    <None Include="EmptySite\Default.cshtml" />
+    <None Include="EmptySite\img\_DS_Store" />
+    <None Include="EmptySite\upload.cshtml" />
+    <None Include="EmptySite\upload_new.cshtml" />
+    <None Include="Default.cshtml" />
+    <None Include="packages.config" />
+    <Antlr4 Include="Testing.g4">
+      <Generator>MSBuild:Compile</Generator>
+      <CustomToolNamespace>Testing</CustomToolNamespace>
+    </Antlr4>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="aaa.txt" />
+    <Content Include="EmptySite\bin\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="EmptySite\bin\System.Web.Helpers.dll" />
+    <Content Include="EmptySite\bin\System.Web.Razor.dll" />
+    <Content Include="EmptySite\bin\System.Web.WebPages.Deployment.dll" />
+    <Content Include="EmptySite\bin\System.Web.WebPages.dll" />
+    <Content Include="EmptySite\bin\System.Web.WebPages.Razor.dll" />
+    <Content Include="EmptySite\bin\WebMatrix.Data.dll" />
+    <Content Include="EmptySite\bin\WebMatrix.WebData.dll" />
+    <Content Include="EmptySite\contact.html" />
+    <Content Include="EmptySite\css\background1.jpg" />
+    <Content Include="EmptySite\css\bootstrap-fullscreen-select.css" />
+    <Content Include="EmptySite\css\bootstrap-theme.min.css" />
+    <Content Include="EmptySite\css\bootstrap.min.css" />
+    <Content Include="EmptySite\css\bootstrap.min.js" />
+    <Content Include="EmptySite\css\component.css" />
+    <Content Include="EmptySite\css\custom.css" />
+    <Content Include="EmptySite\css\default.min.css" />
+    <Content Include="EmptySite\css\demo.css" />
+    <Content Include="EmptySite\css\demo.min.css" />
+    <Content Include="EmptySite\css\font-awesome.min.css" />
+    <Content Include="EmptySite\css\highlight.min.js" />
+    <Content Include="EmptySite\css\impress-demo.css" />
+    <Content Include="EmptySite\css\jquery.min.js" />
+    <Content Include="EmptySite\css\new.css" />
+    <Content Include="EmptySite\css\normalize.css" />
+    <Content Include="EmptySite\css\notify.css" />
+    <Content Include="EmptySite\css\pretty.js" />
+    <Content Include="EmptySite\css\progress.css" />
+    <Content Include="EmptySite\css\sidetogglemenu.css" />
+    <Content Include="EmptySite\css\style.css" />
+    <Content Include="EmptySite\css\style_main.css" />
+    <Content Include="EmptySite\css\style_upload.css" />
+    <Content Include="EmptySite\css\white2.jpg" />
+    <Content Include="EmptySite\documentation.html" />
+    <Content Include="EmptySite\final_notif.html" />
+    <Content Include="EmptySite\img\apple-touch-icon.png" />
+    <Content Include="EmptySite\img\border-image.png" />
+    <Content Include="EmptySite\img\dialog-error.png" />
+    <Content Include="EmptySite\img\dialog-information.png" />
+    <Content Include="EmptySite\img\dialog-warning.png" />
+    <Content Include="EmptySite\img\favicon.png" />
+    <Content Include="EmptySite\img\home.png" />
+    <Content Include="EmptySite\img\icons.png" />
+    <Content Include="EmptySite\img\logo.png" />
+    <Content Include="EmptySite\img\menu.png" />
+    <Content Include="EmptySite\img\menu1.png" />
+    <Content Include="EmptySite\img\stuck.jpg" />
+    <Content Include="EmptySite\img\white1.jpg" />
+    <Content Include="EmptySite\img\white2.jpg" />
+    <Content Include="EmptySite\img\white3.jpg" />
+    <Content Include="EmptySite\js\bootstrap-fullscreen-select.js" />
+    <Content Include="EmptySite\js\bootstrap-fullscreen-select.min.js" />
+    <Content Include="EmptySite\js\bootstrap.js" />
+    <Content Include="EmptySite\js\bootstrap.min.js" />
+    <Content Include="EmptySite\js\boxesFx.js" />
+    <Content Include="EmptySite\js\classie.js" />
+    <Content Include="EmptySite\js\demo.min.js" />
+    <Content Include="EmptySite\js\freewall.js" />
+    <Content Include="EmptySite\js\highlight.min.js" />
+    <Content Include="EmptySite\js\impress.js" />
+    <Content Include="EmptySite\js\index.js" />
+    <Content Include="EmptySite\js\jquery-1.10.2.min.js" />
+    <Content Include="EmptySite\js\jquery-1.3.2.js" />
+    <Content Include="EmptySite\js\jquery.blockUI.js" />
+    <Content Include="EmptySite\js\jquery.fileupload.js" />
+    <Content Include="EmptySite\js\jquery.iframe-transport.js" />
+    <Content Include="EmptySite\js\jquery.jcorners.js" />
+    <Content Include="EmptySite\js\jquery.js" />
+    <Content Include="EmptySite\js\jquery.knob.js" />
+    <Content Include="EmptySite\js\jquery.min.js" />
+    <Content Include="EmptySite\js\jquery.notify.js" />
+    <Content Include="EmptySite\js\jquery.ui.widget.js" />
+    <Content Include="EmptySite\js\modernizr.custom.js" />
+    <Content Include="EmptySite\js\pretty.js" />
+    <Content Include="EmptySite\js\progress.js" />
+    <Content Include="EmptySite\js\script.js" />
+    <Content Include="EmptySite\js\sidetogglemenu.js" />
+    <Content Include="EmptySite\newscript.html" />
+    <Content Include="EmptySite\temp.txt" />
+    <Content Include="Text.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Antlr4.4.4.1-alpha001\build\Antlr4.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Antlr4.4.4.1-alpha001\build\Antlr4.props'))" />
+    <Error Condition="!Exists('..\packages\Antlr4.4.4.1-alpha001\build\Antlr4.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Antlr4.4.4.1-alpha001\build\Antlr4.targets'))" />
+  </Target>
+  <Import Project="..\packages\Antlr4.4.4.1-alpha001\build\Antlr4.targets" Condition="Exists('..\packages\Antlr4.4.4.1-alpha001\build\Antlr4.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
